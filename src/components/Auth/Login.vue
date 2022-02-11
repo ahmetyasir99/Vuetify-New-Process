@@ -8,13 +8,13 @@
                             <v-toolbar-title>Login Form</v-toolbar-title>
                         </v-toolbar>
                         <v-card-text>
-                           <v-text-field prepend-icon="mdi-account" name ="login" label="Username" type="text"></v-text-field> 
-                           <v-text-field prepend-icon="mdi-lock" name ="password" label="Password" type="password"></v-text-field> 
+                           <v-text-field v-model ="username" prepend-icon="mdi-account" name ="login" label="Username" type="text"></v-text-field> 
+                           <v-text-field v-model ="password" prepend-icon="mdi-lock" name ="password" label="Password" type="password"></v-text-field> 
                         </v-card-text>
                         <v-divider></v-divider>
                         <v-card-actions>
                             <v-btn dark color="indigo" round>Sign in</v-btn>
-                            <v-btn dark color="primary" round>
+                            <v-btn dark color="primary" round v-model = "login" @click="submit">
                                 Login 
                                 <v-icon>mdi-chevron-right</v-icon>
                             </v-btn>
@@ -81,13 +81,25 @@
 
 
 <script>
+import axios from 'axios';
 export default {
     name: "login"
     ,data () {
       return {
+        username:'',
+        password:'',
         dialog: false,
       }
     },
-    
+    methods: {
+        submit(){
+            console.log(this.username, this.password)
+            
+            axios.post("https://reqres.in/api/login", this.username,this.password)
+            .then(response => this.articleId = response.data.id);
+        }
+    },
+
 }
+
 </script>
