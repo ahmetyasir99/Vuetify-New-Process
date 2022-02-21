@@ -47,7 +47,7 @@
                                             @click="dialog = false"
                                             
                                         >
-                                            <v-icon>mdi-twitter</v-icon>Login with Twitter 
+                                            <v-icon left>mdi-twitter</v-icon>Login with Twitter 
                                         </v-btn>
                                         <v-spacer></v-spacer>                         
                                     </v-card-actions>
@@ -56,15 +56,15 @@
                                             block outlined color="pink"
                                             @click="dialog = false"
                                         >
-                                            <v-icon>mdi-facebook</v-icon>Login with Facebook 
-                                        </v-btn>
+                                            <v-icon left>mdi-facebook</v-icon>Login with Facebook 
+                                    </v-btn>
                                     </v-card-actions>
                                     <v-card-actions>
                                     <v-btn
                                             block outlined color="pink"
                                             @click="dialog = false"
                                         >
-                                            <v-icon>mdi-instagram</v-icon>Login with Instagram 
+                                            <v-icon left>mdi-instagram</v-icon>Login with Instagram 
                                         </v-btn>
                                     </v-card-actions>
                                 </v-card>

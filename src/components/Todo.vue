@@ -6,7 +6,7 @@
                     <Lists/>
                 </v-flex>
                 <v-flex lg6 pr-2 pl-2>
-                    Tasks
+                    <Tasks/>
                 </v-flex>
                 <v-flex lg3 pl-2>
                     Options
@@ -25,9 +25,10 @@
 </template>
 
 <script>
-import Lists from './Lists'
+import Lists from './Lists';
+import Tasks from './Tasks';
 export default {
     name: "todo",
-    components: {Lists}
+    components: {Lists, Tasks}
 }
 </script>
